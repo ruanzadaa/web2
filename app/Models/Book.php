@@ -9,13 +9,17 @@ class Book extends Model
 {
     use HasFactory;
 
-    protected $fillabel = ["title", "authors_id", "category_id", "published_year"];
+    protected $fillable = ['title', 'author_id', 'category_id', 'published_year'];
 
-    public function author(){
+    public function author()
+    {
         return $this->belongsTo(Author::class);
     }
 
-    public function category(){
+    public function category()
+    {
         return $this->belongsTo(Category::class);
     }
-}
+};
+
+
